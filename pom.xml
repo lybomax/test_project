@@ -12,6 +12,8 @@
     <module>spring_test</module>
     <module>maven_test</module>
     <module>maven_test</module>
+    <module>pit</module>
+    <module>a_sql</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -41,6 +43,11 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
     </dependency>
 
     <dependency>
