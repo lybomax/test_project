@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <artifactId>test_project</artifactId>
+    <groupId>com.runmin</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>a_dtst</artifactId>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+    <repo.central>https://ci.rmitec.cn/nexus/repository/maven-public/</repo.central>
+    <repo.thirdparty>https://ci.rmitec.cn/nexus/repository/maven-thirdparty/</repo.thirdparty>
+    <repo.snapshots>https://ci.rmitec.cn/nexus/repository/maven-snapshots/</repo.snapshots>
+    <repo.release>https://ci.rmitec.cn/nexus/repository/maven-releases/</repo.release>
+    <junit.version>4.12</junit.version>
+    <lombok.version>1.16.4</lombok.version>
+    <logback.version>1.2.3</logback.version>
+    <slf4j.version>1.7.21</slf4j.version>
+    <ifs.snow.bom.version>2.2.0-SNAPSHOT</ifs.snow.bom.version>
+    <commons-lang.version>2.6</commons-lang.version>
+    <spring.version>5.0.7.RELEASE</spring.version>
+    <servlet.version>3.0.1</servlet.version>
+    <javax.el.version>2.2.4</javax.el.version>
+    <servlet-jsp.version>2.2</servlet-jsp.version>
+    <!-- mysql数据库驱动版本 -->
+    <mysql.version>5.1.40</mysql.version>
+    <!-- oracle数据库驱动版本 -->
+    <oracle.ojdbc6.version>11.2.0.3</oracle.ojdbc6.version>
+    <nutz.version>1.b.52</nutz.version>
+    <apache.shiro.version>1.2.1</apache.shiro.version>
+    <ehcache.version>2.5.1</ehcache.version>
+    <pinyin4j.version>2.5.0</pinyin4j.version>
+
+    <!--  集成dubbo -->
+    <ifs.version>2.2.0-SNAPSHOT</ifs.version>
+
+    <!-- scfp微服务中心版本 begin -->
+    <!--        <scfp-acct.version>1.0.0</scfp-acct.version>-->
+    <!-- scfp微服务中心版本 end -->
+
+  </properties>
+  <repositories>
+    <repository>
+      <id>maven-central</id>
+      <name>Maven Central Repo</name>
+      <url>${repo.central}</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>releases</id>
+      <name>releases</name>
+      <url>${repo.release}</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>thirdparty</id>
+      <name>Authorized thirdparty resources</name>
+      <url>${repo.thirdparty}</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
+      <id>snapshots</id>
+      <name>snapshots</name>
+      <url>${repo.snapshots}</url>
+      <layout>default</layout>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+    </repository>
+  </repositories>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.ruimin.ifs</groupId>
+        <artifactId>ifs-snow-bom</artifactId>
+        <version>${ifs.snow.bom.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!--  集成dubbo -->
+      <dependency>
+        <groupId>com.ruimin.ifs</groupId>
+        <artifactId>ifs-bom</artifactId>
+        <version>${ifs.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>${servlet.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.el</groupId>
+      <artifactId>javax.el-api</artifactId>
+      <version>${javax.el.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet.jsp</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>${servlet-jsp.version}</version>
+      <scope>provided</scope>
+    </dependency>
+    <!-- mysql 数据库驱动 -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql.version}</version>
+    </dependency>
+    <!-- oracle -->
+    <!-- <dependency>
+        <groupId>com.oracle</groupId>
+        <artifactId>ojdbc6</artifactId>
+        <version>${oracle.ojdbc6.version}</version>
+      </dependency> -->
+
+    <dependency>
+      <groupId>com.ruimin.ifs</groupId>
+      <artifactId>ifs-boot</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.ruimin.ifs</groupId>
+      <artifactId>ifs-snow-webframework</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.ruimin.ifs</groupId>
+      <artifactId>ifs-snow-switch</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.nutz</groupId>
+      <artifactId>nutz</artifactId>
+      <version>${nutz.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.shiro</groupId>
+      <artifactId>shiro-all</artifactId>
+      <version>${apache.shiro.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sf.ehcache</groupId>
+      <artifactId>ehcache-core</artifactId>
+      <version>${ehcache.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.belerweb</groupId>
+      <artifactId>pinyin4j</artifactId>
+      <version>${pinyin4j.version}</version>
+    </dependency>
+
+    <!--  集成dubbo -->
+    <!--         <dependency>
+                <groupId>com.ruimin.ifs</groupId>
+                <artifactId>ifs-channel-dubbo</artifactId>
+            </dependency> -->
+    <dependency>
+      <groupId>com.ruimin.ifs</groupId>
+      <artifactId>ifs-integration-dubbo</artifactId>
+    </dependency>
+
+    <!-- scfp微服务中心引用 begin -->
+    <!--            <dependency>-->
+    <!--				<groupId>com.ruimin.ifs.scfp.acct</groupId>-->
+    <!--				<artifactId>scfp-acct-service-inf</artifactId>-->
+    <!--				<version>${scfp-acct.version}</version>-->
+    <!--			</dependency>-->
+    <!-- scfp微服务中心引用 end -->
+  </dependencies>
+  <profiles>
+    <profile>
+      <id>local</id>
+      <properties>
+        <environment>local</environment>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <environment>dev</environment>
+      </properties>
+    </profile>
+    <profile>
+      <id>sit</id>
+      <properties>
+        <environment>sit</environment>
+      </properties>
+    </profile>
+    <profile>
+      <id>uat</id>
+      <properties>
+        <environment>uat</environment>
+      </properties>
+    </profile>
+    <profile>
+      <id>pro</id>
+      <properties>
+        <environment>pro</environment>
+      </properties>
+    </profile>
+  </profiles>
+  <!--编译打包时需要包含文件格式 -->
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <excludes>
+          <exclude>initdb/**</exclude>
+          <exclude>dev/**</exclude>
+          <exclude>local/**</exclude>
+          <exclude>sit/**</exclude>
+          <exclude>uat/**</exclude>
+          <exclude>pro/**</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <directory>src/main/resources/${environment}</directory>
+      </resource>
+      <resource>
+        <directory>src/main/java</directory>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <warSourceExcludes>pages/example/**</warSourceExcludes>
+        </configuration>
+      </plugin>
+    </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>2.5</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>3.2.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+</project>
