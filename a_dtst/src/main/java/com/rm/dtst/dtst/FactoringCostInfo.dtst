@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="应收账款融资费用信息表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="id" desc="主键UUID" edittype="textbox" datatype="string" xpath="/id" />
+      <Field id="relaType" desc="关联类型" edittype="textbox" datatype="string" xpath="/relaType" />
+      <Field id="relaNo" desc="关联业务合同号/协议号" edittype="textbox" datatype="string" xpath="/relaNo" />
+      <Field id="costCode" desc="费用代码" edittype="textbox" datatype="string" xpath="/costCode" />
+      <Field id="costName" desc="费用名称" edittype="textbox" datatype="string" xpath="/costName" />
+      <Field id="costClass" desc="费用收取种类" edittype="textbox" datatype="string" xpath="/costClass" />
+      <Field id="costType" desc="收取方式" edittype="textbox" datatype="string" xpath="/costType" />
+      <Field id="chargeType" desc="扣取方式" edittype="textbox" datatype="string" xpath="/chargeType" />
+      <Field id="costCalcType" desc="计算方式" edittype="textbox" datatype="string" xpath="/costCalcType" />
+      <Field id="costAmt" desc="固定费用"  edittype="textbox" datatype="number" scale="2" xpath="/costAmt" />
+      <Field id="lowCostAmt" desc="固定费用"  edittype="textbox" datatype="number" scale="2" xpath="/lowCostAmt" />
+      <Field id="upCostAmt" desc="固定费用"  edittype="textbox" datatype="number" scale="2" xpath="/upCostAmt" />
+      <Field id="costRate" desc="费用比率(%)"  edittype="textbox" datatype="number" scale="6" xpath="/costRate" />
+      <Field id="lowCostRate" desc="费用比率(%)"  edittype="textbox" datatype="number" scale="6" xpath="/lowCostRate" />
+      <Field id="upCostRate" desc="费用比率(%)"  edittype="textbox" datatype="number" scale="6" xpath="/upCostRate" />
+      <Field id="costPhase" desc="费用收取阶段" edittype="textbox" datatype="string" xpath="/costPhase" />
+      <Field id="feeType" desc="费用收取类型" edittype="textbox" datatype="string" xpath="/feeType" />
+      <Field id="costAcct" desc="收费账户" edittype="textbox" datatype="string" xpath="/costAcct" />
+      <Field id="costStart" desc="收费开始日" edittype="datebox" datatype="date" xpath="/costStart" />
+      <Field id="costEnd" desc="收费结束日" edittype="datebox" datatype="date" xpath="/costEnd" />
+      <Field id="createTime" desc="建立时间" edittype="textbox" datatype="string" xpath="/createTime" />
+      <Field id="updateTime" desc="最后更新时间" edittype="textbox" datatype="string" xpath="/updateTime" />
+      <Field id="updateProg" desc="最后更新程序" edittype="textbox" datatype="string" xpath="/updateProg" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

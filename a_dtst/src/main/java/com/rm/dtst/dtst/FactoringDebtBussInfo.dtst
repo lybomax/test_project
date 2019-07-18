@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="应收账款信息流水主表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="id" desc="id" edittype="textbox" datatype="string" xpath="/id" />
+      <Field id="applyType" desc="申请类型:00:录入;01:转让;02:入池;03:出池;04:减值;05:回购;6:核销;07:单据修改;08:催收;09:商纠设定;10:逾期;11:发票融资;12:池融资;13:单据删除;14:商纠解除" edittype="textbox" datatype="string" xpath="/applyType" />
+      <Field id="applyDate" desc="申请日期" edittype="datebox" datatype="date" xpath="/applyDate" />
+      <Field id="appNo" desc="申请编号" edittype="textbox" datatype="string" xpath="/appNo" />
+      <Field id="customerSeller" desc="卖方客户号" edittype="textbox" datatype="string" xpath="/customerSeller" />
+      <Field id="sellerName" desc="卖方客户名称" edittype="textbox" datatype="string" xpath="/sellerName" />
+      <Field id="customerBuyer" desc="买方客户号" edittype="textbox" datatype="string" xpath="/customerBuyer" />
+      <Field id="buyerName" desc="买方客户名称" edittype="textbox" datatype="string" xpath="/buyerName" />
+      <Field id="financingContId" desc="融资合同号" edittype="textbox" datatype="string" xpath="/financingContId" />
+      <Field id="applyNum" desc="申请笔数" edittype="textbox" datatype="int" xpath="/applyNum" />
+      <Field id="applyAmt" desc="申请金额"  edittype="textbox" datatype="number" scale="2" xpath="/applyAmt" />
+      <Field id="businessDate" desc="交易日期" edittype="datebox" datatype="date" xpath="/businessDate" />
+      <Field id="createTime" desc="建立时间" edittype="textbox" datatype="string" xpath="/createTime" />
+      <Field id="updateTime" desc="最后更新时间" edittype="textbox" datatype="string" xpath="/updateTime" />
+      <Field id="updateProg" desc="最后更新程序" edittype="textbox" datatype="string" xpath="/updateProg" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

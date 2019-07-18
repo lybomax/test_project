@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="企业应收账款融资融资方案表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="schemeId" desc="ID" edittype="textbox" datatype="string" xpath="/schemeId" />
+      <Field id="appNo" desc="申请编号" edittype="textbox" datatype="string" xpath="/appNo" />
+      <Field id="custId" desc="融资客户编号" edittype="textbox" datatype="string" xpath="/custId" />
+      <Field id="custName" desc="融资客户名称" edittype="textbox" datatype="string" xpath="/custName" />
+      <Field id="schemeName" desc="融资方案名称" edittype="textbox" datatype="string" xpath="/schemeName" />
+      <Field id="productId" desc="产品编号" edittype="textbox" datatype="string" xpath="/productId" />
+      <Field id="productName" desc="产品名称" edittype="textbox" datatype="string" xpath="/productName" />
+      <Field id="financeMode" desc="融资模式:逐笔融资、框架合同融资" edittype="textbox" datatype="string" xpath="/financeMode" />
+      <Field id="baseProductName" desc="产品名称" edittype="textbox" datatype="string" xpath="/baseProductName" />
+      <Field id="referenceRateMin" desc="参考利率区间下限"  edittype="textbox" datatype="number" scale="6" xpath="/referenceRateMin" />
+      <Field id="referenceRateMax" desc="参考利率区间上限"  edittype="textbox" datatype="number" scale="6" xpath="/referenceRateMax" />
+      <Field id="penaltyRateMin" desc="罚息利率区间下限"  edittype="textbox" datatype="number" scale="6" xpath="/penaltyRateMin" />
+      <Field id="penaltyRateMax" desc="罚息利率区间上限"  edittype="textbox" datatype="number" scale="6" xpath="/penaltyRateMax" />
+      <Field id="repayType" desc="还款方式:
+            01一次性还本付息
+            02每月还息到期还本
+            03等额本息
+            04等额本金
+            05自定义还款" edittype="textbox" datatype="string" xpath="/repayType" />
+      <Field id="feeFlag" desc="收费标识
+            0-不收费
+            1-收费" edittype="textbox" datatype="string" xpath="/feeFlag" />
+      <Field id="status" desc="状态" edittype="textbox" datatype="string" xpath="/status" />
+      <Field id="isLocked" desc="锁定标志" edittype="textbox" datatype="string" xpath="/isLocked" />
+      <Field id="lockAppNo" desc="锁定申请编号" edittype="textbox" datatype="string" xpath="/lockAppNo" />
+      <Field id="coreCustcd" desc="核心企业客户号" edittype="textbox" datatype="string" xpath="/coreCustcd" />
+      <Field id="coreCustname" desc="核心企业名称" edittype="textbox" datatype="string" xpath="/coreCustname" />
+      <Field id="creditNo" desc="额度编号" edittype="textbox" datatype="string" xpath="/creditNo" />
+      <Field id="loanPercent" desc="融资比例"  edittype="textbox" datatype="number" scale="6" xpath="/loanPercent" />
+      <Field id="financingType" desc="融资模式：1-发票融资;2-池融资" edittype="textbox" datatype="string" xpath="/financingType" />
+      <Field id="serviceContent" desc="服务内容：保理融资;账款管理;应收租金催收;坏账担保" edittype="textbox" datatype="string" xpath="/serviceContent" />
+      <Field id="loanWay" desc="出账类型
+            01-流贷" edittype="textbox" datatype="string" xpath="/loanWay" />
+      <Field id="createTime" desc="建立时间" edittype="textbox" datatype="string" xpath="/createTime" />
+      <Field id="updateTime" desc="最后更新时间" edittype="textbox" datatype="string" xpath="/updateTime" />
+      <Field id="updateProg" desc="最后更新程序" edittype="textbox" datatype="string" xpath="/updateProg" />
+      <Field id="baseProductId" desc="产品编号" edittype="textbox" datatype="string" xpath="/baseProductId" />
+      <Field id="capitalCustcd" desc="" edittype="textbox" datatype="string" xpath="/capitalCustcd" />
+      <Field id="capitalCustname" desc="" edittype="textbox" datatype="string" xpath="/capitalCustname" />
+      <Field id="loanCost" desc=""  edittype="textbox" datatype="number" scale="2" xpath="/loanCost" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

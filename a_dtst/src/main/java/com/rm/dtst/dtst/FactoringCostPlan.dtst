@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="id" desc="主键" edittype="textbox" datatype="string" xpath="/id" />
+      <Field id="contId" desc="" edittype="textbox" datatype="string" xpath="/contId" />
+      <Field id="loanId" desc="" edittype="textbox" datatype="string" xpath="/loanId" />
+      <Field id="costInfoId" desc="费用基本表ID" edittype="textbox" datatype="string" xpath="/costInfoId" />
+      <Field id="term" desc="" edittype="textbox" datatype="int" xpath="/term" />
+      <Field id="chargeId" desc="" edittype="textbox" datatype="string" xpath="/chargeId" />
+      <Field id="chargeName" desc="" edittype="textbox" datatype="string" xpath="/chargeName" />
+      <Field id="costAmt" desc=""  edittype="textbox" datatype="number" scale="2" xpath="/costAmt" />
+      <Field id="chargeStatus" desc="" edittype="textbox" datatype="string" xpath="/chargeStatus" />
+      <Field id="costStartDate" desc="" edittype="datebox" datatype="date" xpath="/costStartDate" />
+      <Field id="costEndDate" desc="" edittype="datebox" datatype="date" xpath="/costEndDate" />
+      <Field id="totalAmt" desc=""  edittype="textbox" datatype="number" scale="2" xpath="/totalAmt" />
+      <Field id="costDays" desc="" edittype="textbox" datatype="int" xpath="/costDays" />
+      <Field id="dueAmt" desc=""  edittype="textbox" datatype="number" scale="2" xpath="/dueAmt" />
+      <Field id="chargeAmt" desc=""  edittype="textbox" datatype="number" scale="2" xpath="/chargeAmt" />
+      <Field id="createTime" desc="建立时间" edittype="textbox" datatype="string" xpath="/createTime" />
+      <Field id="updateTime" desc="最后更新时间" edittype="textbox" datatype="string" xpath="/updateTime" />
+      <Field id="updateProg" desc="最后更新程序" edittype="textbox" datatype="string" xpath="/updateProg" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>
