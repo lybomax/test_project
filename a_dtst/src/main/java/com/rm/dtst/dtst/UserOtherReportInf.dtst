@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="其它财务报表信息表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="id" desc="" edittype="textbox" datatype="string" xpath="/id" />
+      <Field id="custId" desc="" edittype="textbox" datatype="string" xpath="/custId" />
+      <Field id="custName" desc="" edittype="textbox" datatype="string" xpath="/custName" />
+      <Field id="financeType" desc="" edittype="textbox" datatype="string" xpath="/financeType" />
+      <Field id="branchType" desc="" edittype="textbox" datatype="string" xpath="/branchType" />
+      <Field id="amt" desc=""  edittype="textbox" datatype="number" scale="2" xpath="/amt" />
+      <Field id="dueDate" desc="" edittype="datebox" datatype="date" xpath="/dueDate" />
+      <Field id="createTime" desc="建立时间" edittype="datebox" datatype="date" xpath="/createTime" />
+      <Field id="updateTime" desc="最后更新时间" edittype="datebox" datatype="date" xpath="/updateTime" />
+      <Field id="updateProg" desc="最后更新程序" edittype="textbox" datatype="string" xpath="/updateProg" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

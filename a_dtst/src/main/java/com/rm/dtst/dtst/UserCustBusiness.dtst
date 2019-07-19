@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="商机信息表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="id" desc="主键" edittype="textbox" datatype="string" xpath="/id" />
+      <Field id="custId" desc="企业编号" edittype="textbox" datatype="string" xpath="/custId" />
+      <Field id="custName" desc="企业名称" edittype="textbox" datatype="string" xpath="/custName" />
+      <Field id="state" desc="状态：01-未处理，02-已处理" edittype="textbox" datatype="string" xpath="/state" />
+      <Field id="contacts" desc="联系人" edittype="textbox" datatype="string" xpath="/contacts" />
+      <Field id="position" desc="职务" edittype="textbox" datatype="string" xpath="/position" />
+      <Field id="mobile" desc="手机号码" edittype="textbox" datatype="string" xpath="/mobile" />
+      <Field id="follwoTxt" desc="跟进结果" edittype="textbox" datatype="string" xpath="/follwoTxt" />
+      <Field id="intentFinancingAmt" desc="意向融资金额"  edittype="textbox" datatype="number" scale="2" xpath="/intentFinancingAmt" />
+      <Field id="createTime" desc="建立时间" edittype="datebox" datatype="date" xpath="/createTime" />
+      <Field id="updateTime" desc="最后更新时间" edittype="datebox" datatype="date" xpath="/updateTime" />
+      <Field id="updateProg" desc="最后更新程序" edittype="textbox" datatype="string" xpath="/updateProg" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

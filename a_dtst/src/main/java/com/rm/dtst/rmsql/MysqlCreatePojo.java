@@ -38,7 +38,7 @@ public class MysqlCreatePojo {
 	private boolean dataSetIsSize = false;// dataset是否产生size属性
 	private PreparedStatement ps = null;
 	private ResultSet rs = null;
-	private int genType =0;// 生成po、dataset,1只生成po，2生成dataset
+	private int genType =0;// 0生成po、dataset,1只生成po，2生成dataset
 	private int isAllTable = 2;// 所有表0，全部，2 指定开头表
 	private String[] tableStart = null;
 	private ArrayList<String> tables = new ArrayList<String>();// 生成的表名
@@ -57,7 +57,7 @@ public class MysqlCreatePojo {
 		conn = DriverManager.getConnection(url, prop);
 
 		// 等于2,
-		 tableStart = new String[] {"factorin"};
+		 tableStart = new String[] {"user"};
 	}
 
 	// 获取库中所有用户表
