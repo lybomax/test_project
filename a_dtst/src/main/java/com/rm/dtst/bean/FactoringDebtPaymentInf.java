@@ -4,7 +4,7 @@ import com.ruimin.ifs.rql.annotation.Id;
 import com.ruimin.ifs.rql.annotation.Table;
 /**
  * @deprecated:应收账款付款提示信息表
- * 创建日期:2019-07-18 10:23:36
+ * 创建日期:2019-07-22 09:36:21
  */
 @Table("factoring_debt_payment_inf")
 public class FactoringDebtPaymentInf{

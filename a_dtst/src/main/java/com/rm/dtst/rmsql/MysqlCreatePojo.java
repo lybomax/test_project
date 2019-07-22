@@ -39,7 +39,7 @@ public class MysqlCreatePojo {
 	private PreparedStatement ps = null;
 	private ResultSet rs = null;
 	private int genType =0;// 0生成po、dataset,1只生成po，2生成dataset
-	private int isAllTable = 2;// 所有表0，全部，2 指定开头表
+	private int isAllTable = 0;// 所有表0，全部，2 指定开头表
 	private String[] tableStart = null;
 	private ArrayList<String> tables = new ArrayList<String>();// 生成的表名
 	private String pojopack = "com.ruimin.ifs.batch.bean.po";

@@ -1,10 +1,10 @@
-package com.rm.dtst.bean;
+package com.ruimin.ifs.batch.bean.po;
 
 import com.ruimin.ifs.rql.annotation.Id;
 import com.ruimin.ifs.rql.annotation.Table;
 /**
  * @deprecated:企业基本信息表
- * 创建日期:2019-07-19 17:33:07
+ * 创建日期:2019-07-22 09:37:39
  */
 @Table("user_cust_base_inf")
 public class UserCustBaseInf{

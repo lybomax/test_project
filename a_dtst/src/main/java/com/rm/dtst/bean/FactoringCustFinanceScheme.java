@@ -4,7 +4,7 @@ import com.ruimin.ifs.rql.annotation.Id;
 import com.ruimin.ifs.rql.annotation.Table;
 /**
  * @deprecated:企业应收账款融资融资方案表
- * 创建日期:2019-07-18 10:23:32
+ * 创建日期:2019-07-22 09:36:17
  */
 @Table("factoring_cust_finance_scheme")
 public class FactoringCustFinanceScheme{

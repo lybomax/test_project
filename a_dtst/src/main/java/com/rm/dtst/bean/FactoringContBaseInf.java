@@ -4,7 +4,7 @@ import com.ruimin.ifs.rql.annotation.Id;
 import com.ruimin.ifs.rql.annotation.Table;
 /**
  * @deprecated:应收账款融资合同信息表
- * 创建日期:2019-07-18 10:23:28
+ * 创建日期:2019-07-22 09:36:14
  */
 @Table("factoring_cont_base_inf")
 public class FactoringContBaseInf{

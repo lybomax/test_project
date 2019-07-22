@@ -4,7 +4,7 @@ import com.ruimin.ifs.rql.annotation.Id;
 import com.ruimin.ifs.rql.annotation.Table;
 /**
  * @deprecated:企业客户经理表
- * 创建日期:2019-07-19 17:33:12
+ * 创建日期:2019-07-22 09:37:44
  */
 @Table("user_ent_manager_inf")
 public class UserEntManagerInf{

@@ -4,7 +4,7 @@ import com.ruimin.ifs.rql.annotation.Id;
 import com.ruimin.ifs.rql.annotation.Table;
 /**
  * @deprecated:应收账款预警基本信息表
- * 创建日期:2019-07-18 10:23:37
+ * 创建日期:2019-07-22 09:36:23
  */
 @Table("factoring_warn_base_inf")
 public class FactoringWarnBaseInf{

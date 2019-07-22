@@ -4,7 +4,7 @@ import com.ruimin.ifs.rql.annotation.Id;
 import com.ruimin.ifs.rql.annotation.Table;
 /**
  * @deprecated:财务报表明细表
- * 创建日期:2019-07-19 17:33:13
+ * 创建日期:2019-07-22 09:37:45
  */
 @Table("user_fin_report_detail")
 public class UserFinReportDetail{

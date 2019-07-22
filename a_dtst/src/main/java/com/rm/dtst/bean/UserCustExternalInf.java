@@ -4,7 +4,7 @@ import com.ruimin.ifs.rql.annotation.Id;
 import com.ruimin.ifs.rql.annotation.Table;
 /**
  * @deprecated:企业外部信息表
- * 创建日期:2019-07-19 17:33:09
+ * 创建日期:2019-07-22 09:37:41
  */
 @Table("user_cust_external_inf")
 public class UserCustExternalInf{

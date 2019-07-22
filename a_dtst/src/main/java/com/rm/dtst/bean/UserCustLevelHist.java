@@ -4,7 +4,7 @@ import com.ruimin.ifs.rql.annotation.Id;
 import com.ruimin.ifs.rql.annotation.Table;
 /**
  * @deprecated:企业外部评级登记簿
- * 创建日期:2019-07-19 17:33:10
+ * 创建日期:2019-07-22 09:37:42
  */
 @Table("user_cust_level_hist")
 public class UserCustLevelHist{

@@ -4,7 +4,7 @@ import com.ruimin.ifs.rql.annotation.Id;
 import com.ruimin.ifs.rql.annotation.Table;
 /**
  * @deprecated:
- * 创建日期:2019-07-18 10:23:31
+ * 创建日期:2019-07-22 09:36:16
  */
 @Table("factoring_cost_plan")
 public class FactoringCostPlan{

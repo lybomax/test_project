@@ -4,7 +4,7 @@ import com.ruimin.ifs.rql.annotation.Id;
 import com.ruimin.ifs.rql.annotation.Table;
 /**
  * @deprecated:应收账款信息流水明细表
- * 创建日期:2019-07-18 10:23:33
+ * 创建日期:2019-07-22 09:36:19
  */
 @Table("factoring_debt_buss_detail")
 public class FactoringDebtBussDetail{
