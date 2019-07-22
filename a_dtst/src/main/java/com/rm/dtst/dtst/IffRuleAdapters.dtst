@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="id" desc="" edittype="textbox" datatype="int" xpath="/id" />
+      <Field id="parentId" desc="" edittype="textbox" datatype="int" xpath="/parentId" />
+      <Field id="code" desc="" edittype="textbox" datatype="string" xpath="/code" />
+      <Field id="name" desc="" edittype="textbox" datatype="string" xpath="/name" />
+      <Field id="value" desc="" edittype="textbox" datatype="string" xpath="/value" />
+      <Field id="priority" desc="" edittype="textbox" datatype="int" xpath="/priority" />
+      <Field id="systemFlag" desc="" edittype="textbox" datatype="int" xpath="/systemFlag" />
+      <Field id="remark" desc="" edittype="textbox" datatype="string" xpath="/remark" />
+      <Field id="activeFlag" desc="" edittype="textbox" datatype="int" xpath="/activeFlag" />
+      <Field id="customTableValueId" desc="" edittype="textbox" datatype="int" xpath="/customTableValueId" />
+      <Field id="createUserId" desc="" edittype="textbox" datatype="string" xpath="/createUserId" />
+      <Field id="createDate" desc="" edittype="textbox" datatype="string" xpath="/createDate" />
+      <Field id="modifiedUserId" desc="" edittype="textbox" datatype="string" xpath="/modifiedUserId" />
+      <Field id="modifiedDate" desc="" edittype="textbox" datatype="string" xpath="/modifiedDate" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

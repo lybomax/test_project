@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="额度分类表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="creditTypeCode" desc="额度分类编号" edittype="textbox" datatype="string" xpath="/creditTypeCode" />
+      <Field id="creditTypeName" desc="额度分类名称" edittype="textbox" datatype="string" xpath="/creditTypeName" />
+      <Field id="grantType" desc="授信类型
+            1-直接授信
+            2-第三方授信
+            3-间接授信
+            4-买方授信" edittype="textbox" datatype="string" xpath="/grantType" />
+      <Field id="productCreditType" desc="产品额度类型
+            01-订单融资额度
+            02-保理融资额度
+            03-提货担保融资额度
+            04-预付款融资额度
+            05-商票保贴融资额度
+            " edittype="textbox" datatype="string" xpath="/productCreditType" />
+      <Field id="remark" desc="备注" edittype="textbox" datatype="string" xpath="/remark" />
+      <Field id="createTime" desc="创建时间" edittype="datebox" datatype="date" xpath="/createTime" />
+      <Field id="updateTime" desc="更新时间" edittype="datebox" datatype="date" xpath="/updateTime" />
+      <Field id="updateProgram" desc="更新程序" edittype="textbox" datatype="string" xpath="/updateProgram" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

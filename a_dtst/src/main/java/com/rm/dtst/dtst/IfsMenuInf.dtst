@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="[框架自带]系统菜单表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="funcid" desc="菜单编号(主键)" edittype="textbox" datatype="string" xpath="/funcid" />
+      <Field id="funcname" desc="功能名称" edittype="textbox" datatype="string" xpath="/funcname" />
+      <Field id="pagepath" desc="访问路径(相对路径)" edittype="textbox" datatype="string" xpath="/pagepath" />
+      <Field id="location" desc="菜单排版（暂不使用）" edittype="textbox" datatype="int" xpath="/location" />
+      <Field id="isdirectory" desc="是否为目录(1是；0否)" edittype="textbox" datatype="int" xpath="/isdirectory" />
+      <Field id="lastdirectory" desc="上级节点编号，为空表示顶级" edittype="textbox" datatype="string" xpath="/lastdirectory" />
+      <Field id="showseq" desc="显示顺序" edittype="textbox" datatype="int" xpath="/showseq" />
+      <Field id="funcClass" desc="暂不使用" edittype="textbox" datatype="string" xpath="/funcClass" />
+      <Field id="funcType" desc="菜单类型(0=菜单，2=功能)" edittype="textbox" datatype="string" xpath="/funcType" />
+      <Field id="workflowFlag" desc="工作流标识(暂不使用)" edittype="textbox" datatype="string" xpath="/workflowFlag" />
+      <Field id="upFuncCode" desc="上级菜单编号(暂不使用)" edittype="textbox" datatype="string" xpath="/upFuncCode" />
+      <Field id="funcDesc" desc="功能描述" edittype="textbox" datatype="string" xpath="/funcDesc" />
+      <Field id="status" desc="状态(1有效，0无效)" edittype="textbox" datatype="string" xpath="/status" />
+      <Field id="miscflgs" desc="扩展字段" edittype="textbox" datatype="string" xpath="/miscflgs" />
+      <Field id="misc" desc="扩展字段" edittype="textbox" datatype="string" xpath="/misc" />
+      <Field id="iconCls" desc="图标名称(字体图表)" edittype="textbox" datatype="string" xpath="/iconCls" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

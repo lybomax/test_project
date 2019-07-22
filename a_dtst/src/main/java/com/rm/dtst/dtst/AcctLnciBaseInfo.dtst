@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="放款登记簿" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="loanId" desc="借据id" edittype="textbox" datatype="string" xpath="/loanId" />
+      <Field id="loanNo" desc="借据编号" edittype="textbox" datatype="string" xpath="/loanNo" />
+      <Field id="financingContId" desc="融资服务合同编号" edittype="textbox" datatype="string" xpath="/financingContId" />
+      <Field id="custId" desc="融资方客户号" edittype="textbox" datatype="string" xpath="/custId" />
+      <Field id="custName" desc="融资方名称" edittype="textbox" datatype="string" xpath="/custName" />
+      <Field id="capitalId" desc="资金方" edittype="textbox" datatype="string" xpath="/capitalId" />
+      <Field id="capitalName" desc="资金方名称" edittype="textbox" datatype="string" xpath="/capitalName" />
+      <Field id="schemeId" desc="融资方案编号" edittype="textbox" datatype="string" xpath="/schemeId" />
+      <Field id="productId" desc="产品编号" edittype="textbox" datatype="string" xpath="/productId" />
+      <Field id="baseProductId" desc="基础产品编号" edittype="textbox" datatype="string" xpath="/baseProductId" />
+      <Field id="applyAmt" desc="申请金额"  edittype="textbox" datatype="number" scale="2" xpath="/applyAmt" />
+      <Field id="lnciAmt" desc="借据金额"  edittype="textbox" datatype="number" scale="2" xpath="/lnciAmt" />
+      <Field id="lnciBal" desc="借据余额"  edittype="textbox" datatype="number" scale="2" xpath="/lnciBal" />
+      <Field id="repaymentAmt" desc="已还金额"  edittype="textbox" datatype="number" scale="2" xpath="/repaymentAmt" />
+      <Field id="startDate" desc="起息日期" edittype="datebox" datatype="date" xpath="/startDate" />
+      <Field id="endDate" desc="到期日期" edittype="datebox" datatype="date" xpath="/endDate" />
+      <Field id="repayMode" desc="还款方式:01-一次性还本付息、02-每月还息到期还本、03-等额本息、04-等额本金" edittype="textbox" datatype="string" xpath="/repayMode" />
+      <Field id="rateType" desc="利率类型" edittype="textbox" datatype="string" xpath="/rateType" />
+      <Field id="baseYearRate" desc="基准年利率(％)"  edittype="textbox" datatype="number" scale="6" xpath="/baseYearRate" />
+      <Field id="rateFloatType" desc="利率浮动方式:00-不浮动，01-上浮，02-下浮" edittype="textbox" datatype="string" xpath="/rateFloatType" />
+      <Field id="rateFloatValue" desc="利率浮动值"  edittype="textbox" datatype="number" scale="6" xpath="/rateFloatValue" />
+      <Field id="executeRate" desc="执行年/月利率(％)"  edittype="textbox" datatype="number" scale="6" xpath="/executeRate" />
+      <Field id="overdueFloatValue" desc="逾期浮动值"  edittype="textbox" datatype="number" scale="6" xpath="/overdueFloatValue" />
+      <Field id="punitivePercent" desc="逾期罚息比率(％)"  edittype="textbox" datatype="number" scale="6" xpath="/punitivePercent" />
+      <Field id="normalCapital" desc="正常本金"  edittype="textbox" datatype="number" scale="2" xpath="/normalCapital" />
+      <Field id="overdueCapital" desc="逾期本金"  edittype="textbox" datatype="number" scale="2" xpath="/overdueCapital" />
+      <Field id="receivableAccuredInt" desc="应收应计利息"  edittype="textbox" datatype="number" scale="2" xpath="/receivableAccuredInt" />
+      <Field id="receivableInt" desc="应收欠息"  edittype="textbox" datatype="number" scale="2" xpath="/receivableInt" />
+      <Field id="receivablePunishInt" desc="应收罚息"  edittype="textbox" datatype="number" scale="2" xpath="/receivablePunishInt" />
+      <Field id="firstBailRatio" desc="初始保证金比例"  edittype="textbox" datatype="number" scale="6" xpath="/firstBailRatio" />
+      <Field id="bailAmt" desc="初始保证金金额"  edittype="textbox" datatype="number" scale="2" xpath="/bailAmt" />
+      <Field id="addBailAmt" desc="追加保证金金额"  edittype="textbox" datatype="number" scale="2" xpath="/addBailAmt" />
+      <Field id="addCashEqtAmt" desc="追加现金等价物金额"  edittype="textbox" datatype="number" scale="2" xpath="/addCashEqtAmt" />
+      <Field id="initCashEqtAmt" desc="初始现金等价物总额"  edittype="textbox" datatype="number" scale="2" xpath="/initCashEqtAmt" />
+      <Field id="isLocked" desc="锁定标识：0-未锁定;1-锁定" edittype="textbox" datatype="string" xpath="/isLocked" />
+      <Field id="lockAppNo" desc="加锁业务编号" edittype="textbox" datatype="string" xpath="/lockAppNo" />
+      <Field id="slaveContNo" desc="抵质押合同号" edittype="textbox" datatype="string" xpath="/slaveContNo" />
+      <Field id="lnciStatus" desc="借据状态:00-正常、01-逾期、02-呆滞、03-无效、04-部分还款、05-已结清" edittype="textbox" datatype="string" xpath="/lnciStatus" />
+      <Field id="fivelevel" desc="贷款五级分类:01-正常、02-关注、03-次级、04-可疑、05-损失" edittype="textbox" datatype="string" xpath="/fivelevel" />
+      <Field id="branchId" desc="机构号" edittype="textbox" datatype="string" xpath="/branchId" />
+      <Field id="mgrNo" desc="客户经理" edittype="textbox" datatype="string" xpath="/mgrNo" />
+      <Field id="createTime" desc="建立时间" edittype="textbox" datatype="string" xpath="/createTime" />
+      <Field id="updateTime" desc="最后更新时间" edittype="textbox" datatype="string" xpath="/updateTime" />
+      <Field id="updateProg" desc="最后更新程序" edittype="textbox" datatype="string" xpath="/updateProg" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

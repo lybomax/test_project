@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="[框架自带]定时任务配置表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="id" desc="主键" edittype="textbox" datatype="string" xpath="/id" />
+      <Field id="jobno" desc="任务编号(唯一)" edittype="textbox" datatype="int" xpath="/jobno" />
+      <Field id="processFunction" desc="执行任务类" edittype="textbox" datatype="string" xpath="/processFunction" />
+      <Field id="processParam" desc="任务参数,格式为:key1=值1;key2=值2;.." edittype="textbox" datatype="string" xpath="/processParam" />
+      <Field id="maxproc" desc="最大次数(暂未使用)" edittype="textbox" datatype="int" xpath="/maxproc" />
+      <Field id="runtime" desc="执行方式90=每日93=每月初97=每月某日98=每月末9N不运行" edittype="textbox" datatype="string" xpath="/runtime" />
+      <Field id="daysOfMonth" desc="每月某日" edittype="textbox" datatype="int" xpath="/daysOfMonth" />
+      <Field id="repeatTime" desc="执行间隔(单位为分钟)" edittype="textbox" datatype="int" xpath="/repeatTime" />
+      <Field id="repeatCnt" desc="日执行次数(-1表示不控制)" edittype="textbox" datatype="int" xpath="/repeatCnt" />
+      <Field id="startTime" desc="开始时间,格式为:HHmmss" edittype="textbox" datatype="string" xpath="/startTime" />
+      <Field id="endTime" desc="结束时间,格式为:HHmmss" edittype="textbox" datatype="string" xpath="/endTime" />
+      <Field id="lastRunTime" desc="最后的执行时间" edittype="datetimebox" datatype="timestamp" xpath="/lastRunTime" />
+      <Field id="dueTime" desc="到期时间(暂未使用)" edittype="datetimebox" datatype="timestamp" xpath="/dueTime" />
+      <Field id="sucFlag" desc="成功标识(暂未使用)" edittype="textbox" datatype="string" xpath="/sucFlag" />
+      <Field id="failFlag" desc="失败标识(暂未使用)" edittype="textbox" datatype="string" xpath="/failFlag" />
+      <Field id="auto" desc="是否自动(暂未使用)" edittype="textbox" datatype="string" xpath="/auto" />
+      <Field id="lockOwn" desc="锁定用户(暂未使用)" edittype="textbox" datatype="string" xpath="/lockOwn" />
+      <Field id="desc0" desc="任务描述0" edittype="textbox" datatype="string" xpath="/desc0" />
+      <Field id="desc1" desc="任务描述1" edittype="textbox" datatype="string" xpath="/desc1" />
+      <Field id="desc2" desc="任务描述2" edittype="textbox" datatype="string" xpath="/desc2" />
+      <Field id="timestamps" desc="设置时间" edittype="datetimebox" datatype="timestamp" xpath="/timestamps" />
+      <Field id="dualcontrolLockstatus" desc="(暂未使用)" edittype="textbox" datatype="string" xpath="/dualcontrolLockstatus" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

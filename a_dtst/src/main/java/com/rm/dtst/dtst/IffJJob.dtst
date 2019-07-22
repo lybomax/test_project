@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="dbid" desc="" edittype="textbox" datatype="string" xpath="/dbid" />
+      <Field id="class" desc="" edittype="textbox" datatype="string" xpath="/class" />
+      <Field id="dbversion" desc="" edittype="textbox" datatype="int" xpath="/dbversion" />
+      <Field id="duedate" desc="" edittype="datebox" datatype="date" xpath="/duedate" />
+      <Field id="state" desc="" edittype="textbox" datatype="string" xpath="/state" />
+      <Field id="isexclusive" desc="" edittype="textbox" datatype="string" xpath="/isexclusive" />
+      <Field id="lockowner" desc="" edittype="textbox" datatype="string" xpath="/lockowner" />
+      <Field id="lockexptime" desc="" edittype="datebox" datatype="date" xpath="/lockexptime" />
+      <Field id="exception" desc="" edittype="textbox" datatype="string" xpath="/exception" />
+      <Field id="retries" desc="" edittype="textbox" datatype="int" xpath="/retries" />
+      <Field id="processinstance" desc="" edittype="textbox" datatype="string" xpath="/processinstance" />
+      <Field id="execution" desc="" edittype="textbox" datatype="string" xpath="/execution" />
+      <Field id="cfg" desc="" edittype="textbox" datatype="string" xpath="/cfg" />
+      <Field id="signal" desc="" edittype="textbox" datatype="string" xpath="/signal" />
+      <Field id="event" desc="" edittype="textbox" datatype="string" xpath="/event" />
+      <Field id="repeat" desc="" edittype="textbox" datatype="string" xpath="/repeat" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

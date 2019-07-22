@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="审批路线表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="routeId" desc="站点ID" edittype="textbox" datatype="string" xpath="/routeId" />
+      <Field id="templateRouteId" desc="配置表id" edittype="textbox" datatype="string" xpath="/templateRouteId" />
+      <Field id="routeName" desc="站点名称" edittype="textbox" datatype="string" xpath="/routeName" />
+      <Field id="routeType" desc="站点类型：
+            01-普通节点
+            02-会签节点
+            03-等待节点" edittype="textbox" datatype="string" xpath="/routeType" />
+      <Field id="participantType" desc="站点参与者类型：
+            01-分配到人
+            02-分配到角色
+            03-分配到机构+角色" edittype="textbox" datatype="string" xpath="/participantType" />
+      <Field id="participantBrcode" desc="站点参与机构" edittype="textbox" datatype="string" xpath="/participantBrcode" />
+      <Field id="participantRole" desc="站点参与角色" edittype="textbox" datatype="int" xpath="/participantRole" />
+      <Field id="participantStaff" desc="站点参与人" edittype="textbox" datatype="string" xpath="/participantStaff" />
+      <Field id="signingStrategy" desc="会签策略:
+            01-按完成条件百分比
+            02-按完成条件个数" edittype="textbox" datatype="string" xpath="/signingStrategy" />
+      <Field id="signingStrategyValue" desc="会签策略值" edittype="textbox" datatype="int" xpath="/signingStrategyValue" />
+      <Field id="gobackStrategy" desc="本站点退回策略：01-上站点，02-首站点，03-首节点" edittype="textbox" datatype="string" xpath="/gobackStrategy" />
+      <Field id="personaliseFlag" desc="是否个性化站点：
+            0-否
+            1-是" edittype="textbox" datatype="string" xpath="/personaliseFlag" />
+      <Field id="routeUrl" desc="节点URL" edittype="textbox" datatype="string" xpath="/routeUrl" />
+      <Field id="upRouteId" desc="上一站点ID" edittype="textbox" datatype="string" xpath="/upRouteId" />
+      <Field id="amtStrategyFlag" desc="是否金额策略：
+            0-否
+            1-是" edittype="textbox" datatype="string" xpath="/amtStrategyFlag" />
+      <Field id="singleLimit" desc="单笔限额"  edittype="textbox" datatype="number" scale="2" xpath="/singleLimit" />
+      <Field id="deleteFlag" desc="是否可删除：
+            0-否
+            1-是" edittype="textbox" datatype="string" xpath="/deleteFlag" />
+      <Field id="firstRouteFlag" desc="是否审批路线首站点：
+            0-否
+            1-是" edittype="textbox" datatype="string" xpath="/firstRouteFlag" />
+      <Field id="createTime" desc="创建时间" edittype="datebox" datatype="date" xpath="/createTime" />
+      <Field id="updateTime" desc="更新时间" edittype="datebox" datatype="date" xpath="/updateTime" />
+      <Field id="updateProgram" desc="更新程序" edittype="textbox" datatype="string" xpath="/updateProgram" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

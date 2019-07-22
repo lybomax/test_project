@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="handle" desc="" edittype="textbox" datatype="string" xpath="/handle" />
+      <Field id="assignmode" desc="1：单一分配
+            2：多重分配
+            3：抢占分配" edittype="textbox" datatype="int" xpath="/assignmode" />
+      <Field id="exittype" desc="1：按个数
+            2：按百分比" edittype="textbox" datatype="string" xpath="/exittype" />
+      <Field id="exitcount" desc="" edittype="textbox" datatype="int" xpath="/exitcount" />
+      <Field id="ptkind" desc="1：分配到人员
+            2：分配到岗位
+            3：分配到组织" edittype="textbox" datatype="int" xpath="/ptkind" />
+      <Field id="ptassign" desc="1：通过组织信息选择
+            2：通过流程变量赋值
+            3：通过分派策略适配器" edittype="textbox" datatype="int" xpath="/ptassign" />
+      <Field id="pthistory" desc="1：当前参与者为流程启动者
+            2：当前参与者不能为上一节点参与者" edittype="textbox" datatype="int" xpath="/pthistory" />
+      <Field id="result" desc="" edittype="textbox" datatype="string" xpath="/result" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

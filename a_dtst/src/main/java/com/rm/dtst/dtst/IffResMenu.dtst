@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="menuid" desc="" edittype="textbox" datatype="string" xpath="/menuid" />
+      <Field id="menucode" desc="" edittype="textbox" datatype="string" xpath="/menucode" />
+      <Field id="menuname" desc="" edittype="textbox" datatype="string" xpath="/menuname" />
+      <Field id="parentcode" desc="" edittype="textbox" datatype="string" xpath="/parentcode" />
+      <Field id="url" desc="" edittype="textbox" datatype="string" xpath="/url" />
+      <Field id="level" desc="" edittype="textbox" datatype="int" xpath="/level" />
+      <Field id="visible" desc="" edittype="textbox" datatype="string" xpath="/visible" />
+      <Field id="enabled" desc="" edittype="textbox" datatype="string" xpath="/enabled" />
+      <Field id="tooltip" desc="" edittype="textbox" datatype="string" xpath="/tooltip" />
+      <Field id="seqNo" desc="" edittype="textbox" datatype="int" xpath="/seqNo" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

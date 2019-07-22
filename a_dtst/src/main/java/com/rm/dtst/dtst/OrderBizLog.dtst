@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="订单中心业务流水表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="bizLogId" desc="业务流水号" edittype="textbox" datatype="string" xpath="/bizLogId" />
+      <Field id="srcLogId" desc="来源流水号" edittype="textbox" datatype="string" xpath="/srcLogId" />
+      <Field id="sysLogId" desc="平台流水号" edittype="textbox" datatype="string" xpath="/sysLogId" />
+      <Field id="channelId" desc="渠道标识" edittype="textbox" datatype="string" xpath="/channelId" />
+      <Field id="channelMsgId" desc="渠道报文标识号" edittype="textbox" datatype="string" xpath="/channelMsgId" />
+      <Field id="channelMsgType" desc="渠道报文类型" edittype="textbox" datatype="string" xpath="/channelMsgType" />
+      <Field id="channelDate" desc="渠道日期" edittype="datebox" datatype="date" xpath="/channelDate" />
+      <Field id="channelTerminalType" desc="渠道终端类型
+            10-app iOS
+            11-app android
+            20-web
+            30-wechat" edittype="textbox" datatype="string" xpath="/channelTerminalType" />
+      <Field id="bizCat" desc="业务大类" edittype="textbox" datatype="string" xpath="/bizCat" />
+      <Field id="bizSubCat" desc="业务子类" edittype="textbox" datatype="string" xpath="/bizSubCat" />
+      <Field id="txnDate" desc="交易日期" edittype="datebox" datatype="date" xpath="/txnDate" />
+      <Field id="txnTime" desc="交易时间" edittype="datebox" datatype="date" xpath="/txnTime" />
+      <Field id="revsFlag" desc="冲正标识
+            0-正交易
+            1-冲正交易" edittype="textbox" datatype="string" xpath="/revsFlag" />
+      <Field id="origBizLogId" desc="原业务流水号" edittype="textbox" datatype="string" xpath="/origBizLogId" />
+      <Field id="origSrcLogId" desc="原来源流水号" edittype="textbox" datatype="string" xpath="/origSrcLogId" />
+      <Field id="txnStatus" desc="交易状态
+            00-成功
+            10-待处理
+            11-处理中
+            80-未明
+            90-已冲正
+            99-失败" edittype="textbox" datatype="string" xpath="/txnStatus" />
+      <Field id="txnFailDesc" desc="交易失败原因" edittype="textbox" datatype="string" xpath="/txnFailDesc" />
+      <Field id="requestMsg" desc="请求报文" edittype="textbox" datatype="string" xpath="/requestMsg" />
+      <Field id="responseMsg" desc="应答报文" edittype="textbox" datatype="string" xpath="/responseMsg" />
+      <Field id="resultCode" desc="返回码" edittype="textbox" datatype="string" xpath="/resultCode" />
+      <Field id="resultDesc" desc="返回信息" edittype="textbox" datatype="string" xpath="/resultDesc" />
+      <Field id="createTime" desc="创建时间" edittype="datebox" datatype="date" xpath="/createTime" />
+      <Field id="updateTime" desc="更新时间" edittype="datebox" datatype="date" xpath="/updateTime" />
+      <Field id="updateProgram" desc="更新程序" edittype="textbox" datatype="string" xpath="/updateProgram" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

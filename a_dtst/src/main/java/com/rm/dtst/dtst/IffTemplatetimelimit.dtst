@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="poid" desc="" edittype="textbox" datatype="string" xpath="/poid" />
+      <Field id="templatehandle" desc="" edittype="textbox" datatype="string" xpath="/templatehandle" />
+      <Field id="timingscheme" desc="" edittype="textbox" datatype="string" xpath="/timingscheme" />
+      <Field id="consumeday" desc="" edittype="textbox" datatype="int" xpath="/consumeday" />
+      <Field id="consumehour" desc="" edittype="textbox" datatype="int" xpath="/consumehour" />
+      <Field id="consumeminute" desc="" edittype="textbox" datatype="int" xpath="/consumeminute" />
+      <Field id="consumesecond" desc="" edittype="textbox" datatype="int" xpath="/consumesecond" />
+      <Field id="adaptertype" desc="1:SPRING BEAN
+            2:普通JAVA类" edittype="textbox" datatype="string" xpath="/adaptertype" />
+      <Field id="adaptername" desc="当适配器类型为“0”时，名称为JAVA完整类名（包+名称）
+            当适配器类型为“1”时，名称为SPRING配置的BEAN ID" edittype="textbox" datatype="string" xpath="/adaptername" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

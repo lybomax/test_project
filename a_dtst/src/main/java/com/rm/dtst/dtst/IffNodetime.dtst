@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="handle" desc="" edittype="textbox" datatype="string" xpath="/handle" />
+      <Field id="delayday" desc="" edittype="textbox" datatype="int" xpath="/delayday" />
+      <Field id="delayhour" desc="" edittype="textbox" datatype="int" xpath="/delayhour" />
+      <Field id="delayminute" desc="" edittype="textbox" datatype="int" xpath="/delayminute" />
+      <Field id="delaysecond" desc="" edittype="textbox" datatype="int" xpath="/delaysecond" />
+      <Field id="cycletype" desc="1：无循环
+            2：有次数限制的循环
+            3：有时间限制的循环" edittype="textbox" datatype="string" xpath="/cycletype" />
+      <Field id="cyclecount" desc="" edittype="textbox" datatype="int" xpath="/cyclecount" />
+      <Field id="intervalday" desc="" edittype="textbox" datatype="int" xpath="/intervalday" />
+      <Field id="intervalhour" desc="" edittype="textbox" datatype="int" xpath="/intervalhour" />
+      <Field id="intervalminute" desc="" edittype="textbox" datatype="int" xpath="/intervalminute" />
+      <Field id="intervalsecond" desc="" edittype="textbox" datatype="int" xpath="/intervalsecond" />
+      <Field id="continueday" desc="" edittype="textbox" datatype="int" xpath="/continueday" />
+      <Field id="continuehour" desc="" edittype="textbox" datatype="int" xpath="/continuehour" />
+      <Field id="continueminute" desc="" edittype="textbox" datatype="int" xpath="/continueminute" />
+      <Field id="continuesecond" desc="" edittype="textbox" datatype="int" xpath="/continuesecond" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

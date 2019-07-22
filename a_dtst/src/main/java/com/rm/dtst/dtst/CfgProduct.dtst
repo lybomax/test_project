@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="产品信息表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="productId" desc="产品编号" edittype="textbox" datatype="string" xpath="/productId" />
+      <Field id="productName" desc="产品名称" edittype="textbox" datatype="string" xpath="/productName" />
+      <Field id="productCat" desc="产品大类" edittype="textbox" datatype="string" xpath="/productCat" />
+      <Field id="productSubCat" desc="产品子类" edittype="textbox" datatype="string" xpath="/productSubCat" />
+      <Field id="parentProductId" desc="上级产品编号" edittype="textbox" datatype="string" xpath="/parentProductId" />
+      <Field id="validFlag" desc="有效标识
+            0-无效
+            1-有效" edittype="textbox" datatype="string" xpath="/validFlag" />
+      <Field id="remark" desc="备注" edittype="textbox" datatype="string" xpath="/remark" />
+      <Field id="createTime" desc="创建时间" edittype="datebox" datatype="date" xpath="/createTime" />
+      <Field id="updateTime" desc="更新时间" edittype="datebox" datatype="date" xpath="/updateTime" />
+      <Field id="updateProgram" desc="更新程序" edittype="textbox" datatype="string" xpath="/updateProgram" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

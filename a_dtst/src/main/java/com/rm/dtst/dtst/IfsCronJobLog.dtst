@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="[框架自带]定时任务执行日志表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="id" desc="主键" edittype="textbox" datatype="string" xpath="/id" />
+      <Field id="jobno" desc="任务标识号" edittype="textbox" datatype="int" xpath="/jobno" />
+      <Field id="subProceFunction" desc="执行任务类" edittype="textbox" datatype="string" xpath="/subProceFunction" />
+      <Field id="excuteTime" desc="执行时间" edittype="datetimebox" datatype="timestamp" xpath="/excuteTime" />
+      <Field id="excuteResult" desc="执行结果1-成功，0-失败" edittype="textbox" datatype="string" xpath="/excuteResult" />
+      <Field id="excuteOwn" desc="执行的服务器实例(暂未使用)" edittype="textbox" datatype="string" xpath="/excuteOwn" />
+      <Field id="failFlag" desc="失败标志位0-未失败，1-失败" edittype="textbox" datatype="string" xpath="/failFlag" />
+      <Field id="sucFlag" desc="成功标志0-未成功，1-成功" edittype="textbox" datatype="string" xpath="/sucFlag" />
+      <Field id="exceptionMsg" desc="失败信息" edittype="textbox" datatype="string" xpath="/exceptionMsg" />
+      <Field id="endExcuteFlag" desc="是否已结束当日执行1是0否" edittype="textbox" datatype="string" xpath="/endExcuteFlag" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="[框架自带]系统参数表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="paramId" desc="参数分组(主键)" edittype="textbox" datatype="string" xpath="/paramId" />
+      <Field id="magicId" desc="参数编号(主键)" edittype="textbox" datatype="string" xpath="/magicId" />
+      <Field id="paramStartTm" desc="有效期开始日期(暂未使用)" edittype="datebox" datatype="date" xpath="/paramStartTm" />
+      <Field id="paramEndTm" desc="有效期截止日期(暂未使用)" edittype="datebox" datatype="date" xpath="/paramEndTm" />
+      <Field id="paramChangFlag" desc="参数修改标识(暂未使用)" edittype="textbox" datatype="string" xpath="/paramChangFlag" />
+      <Field id="paramValueTx" desc="参数值" edittype="textbox" datatype="string" xpath="/paramValueTx" />
+      <Field id="lastUpdTlr" desc="最后更新操作员" edittype="textbox" datatype="string" xpath="/lastUpdTlr" />
+      <Field id="lastUpdFunc" desc="最后修改交易码" edittype="textbox" datatype="string" xpath="/lastUpdFunc" />
+      <Field id="lastUpdDate" desc="最后更新日期" edittype="datebox" datatype="date" xpath="/lastUpdDate" />
+      <Field id="desc0" desc="参数描述" edittype="textbox" datatype="string" xpath="/desc0" />
+      <Field id="st" desc="状态(暂未使用)" edittype="textbox" datatype="string" xpath="/st" />
+      <Field id="isLock" desc="是否锁定(暂未使用)" edittype="textbox" datatype="string" xpath="/isLock" />
+      <Field id="isDel" desc="是否删除(暂未使用)" edittype="textbox" datatype="string" xpath="/isDel" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

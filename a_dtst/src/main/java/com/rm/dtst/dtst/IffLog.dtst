@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="poid" desc="" edittype="textbox" datatype="string" xpath="/poid" />
+      <Field id="categorypoid" desc="" edittype="textbox" datatype="string" xpath="/categorypoid" />
+      <Field id="logtime" desc="" edittype="datebox" datatype="date" xpath="/logtime" />
+      <Field id="logtitle" desc="" edittype="textbox" datatype="string" xpath="/logtitle" />
+      <Field id="logcontent" desc="" edittype="textbox" datatype="string" xpath="/logcontent" />
+      <Field id="mpid" desc="" edittype="textbox" datatype="string" xpath="/mpid" />
+      <Field id="processpoid" desc="" edittype="textbox" datatype="string" xpath="/processpoid" />
+      <Field id="actionname" desc="" edittype="textbox" datatype="string" xpath="/actionname" />
+      <Field id="actiontype" desc="" edittype="textbox" datatype="string" xpath="/actiontype" />
+      <Field id="operatorid" desc="" edittype="textbox" datatype="string" xpath="/operatorid" />
+      <Field id="operatorname" desc="" edittype="textbox" datatype="string" xpath="/operatorname" />
+      <Field id="remark" desc="" edittype="textbox" datatype="string" xpath="/remark" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

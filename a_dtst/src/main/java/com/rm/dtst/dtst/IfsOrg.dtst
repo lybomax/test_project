@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="[框架自带]机构信息表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="brcode" desc="内部机构号" edittype="textbox" datatype="string" xpath="/brcode" />
+      <Field id="brno" desc="外部机构号" edittype="textbox" datatype="string" xpath="/brno" />
+      <Field id="brname" desc="机构名称" edittype="textbox" datatype="string" xpath="/brname" />
+      <Field id="brclass" desc="机构级别(DDIC:105)" edittype="textbox" datatype="string" xpath="/brclass" />
+      <Field id="brattr" desc="机构属性(暂未使用)" edittype="textbox" datatype="string" xpath="/brattr" />
+      <Field id="blnBranchClass" desc="分支机构级别(暂未使用)" edittype="textbox" datatype="string" xpath="/blnBranchClass" />
+      <Field id="blnBranchBrcode" desc="分支机构号(暂未使用)" edittype="textbox" datatype="string" xpath="/blnBranchBrcode" />
+      <Field id="blnManageBrcode" desc="管理机构号" edittype="textbox" datatype="string" xpath="/blnManageBrcode" />
+      <Field id="blnUpBrcode" desc="上级机构号" edittype="textbox" datatype="string" xpath="/blnUpBrcode" />
+      <Field id="txnBrcode" desc="交易机构号(暂未使用)" edittype="textbox" datatype="string" xpath="/txnBrcode" />
+      <Field id="authlvl" desc="授权级别(暂未使用)" edittype="textbox" datatype="string" xpath="/authlvl" />
+      <Field id="linkman" desc="联系人(暂未使用)" edittype="textbox" datatype="string" xpath="/linkman" />
+      <Field id="teleno" desc="联系电话(暂未使用)" edittype="textbox" datatype="string" xpath="/teleno" />
+      <Field id="address" desc="机构地址" edittype="textbox" datatype="string" xpath="/address" />
+      <Field id="postno" desc="邮编" edittype="textbox" datatype="string" xpath="/postno" />
+      <Field id="otherAreaFlag" desc="异地行标识(暂未使用)" edittype="textbox" datatype="string" xpath="/otherAreaFlag" />
+      <Field id="regionalism" desc="行政区划代码(暂未使用)" edittype="textbox" datatype="string" xpath="/regionalism" />
+      <Field id="financeCode" desc="金融机构代码(暂未使用)" edittype="datetimebox" datatype="timestamp" xpath="/financeCode" />
+      <Field id="status" desc="有效标识(1有效0无效)" edittype="textbox" datatype="string" xpath="/status" />
+      <Field id="miscflgs" desc="扩展字段" edittype="textbox" datatype="string" xpath="/miscflgs" />
+      <Field id="misc" desc="扩展字段" edittype="textbox" datatype="string" xpath="/misc" />
+      <Field id="lastUpdTlr" desc="最后更新操作员" edittype="textbox" datatype="string" xpath="/lastUpdTlr" />
+      <Field id="lastUpdFunc" desc="最后修改交易码" edittype="textbox" datatype="string" xpath="/lastUpdFunc" />
+      <Field id="lastUpdDate" desc="最后更新日期" edittype="datebox" datatype="date" xpath="/lastUpdDate" />
+      <Field id="st" desc="记录状态(暂未使用)" edittype="textbox" datatype="string" xpath="/st" />
+      <Field id="isLock" desc="是否锁定(暂未使用)" edittype="textbox" datatype="string" xpath="/isLock" />
+      <Field id="isDel" desc="是否删除(暂未使用)" edittype="textbox" datatype="string" xpath="/isDel" />
+      <Field id="legalPersonBrcode" desc="" edittype="textbox" datatype="string" xpath="/legalPersonBrcode" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="额度交易流水表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="txnLogId" desc="交易流水号" edittype="textbox" datatype="string" xpath="/txnLogId" />
+      <Field id="srcLogId" desc="来源流水号" edittype="textbox" datatype="string" xpath="/srcLogId" />
+      <Field id="creditId" desc="额度编号" edittype="textbox" datatype="string" xpath="/creditId" />
+      <Field id="applyLogId" desc="申请流水号" edittype="textbox" datatype="string" xpath="/applyLogId" />
+      <Field id="relBizId" desc="关联业务编号" edittype="textbox" datatype="string" xpath="/relBizId" />
+      <Field id="amt" desc="金额"  edittype="textbox" datatype="number" scale="2" xpath="/amt" />
+      <Field id="prevReservedCredit" desc="交易前预占用额度"  edittype="textbox" datatype="number" scale="2" xpath="/prevReservedCredit" />
+      <Field id="prevUsedCredit" desc="交易前已占额度"  edittype="textbox" datatype="number" scale="2" xpath="/prevUsedCredit" />
+      <Field id="prevFrozenCredit" desc="交易前冻结额度"  edittype="textbox" datatype="number" scale="2" xpath="/prevFrozenCredit" />
+      <Field id="prevAvailableCredit" desc="交易前可用额度"  edittype="textbox" datatype="number" scale="2" xpath="/prevAvailableCredit" />
+      <Field id="postReservedCredit" desc="交易后预占用额度"  edittype="textbox" datatype="number" scale="2" xpath="/postReservedCredit" />
+      <Field id="postUsedCredit" desc="交易后已占额度"  edittype="textbox" datatype="number" scale="2" xpath="/postUsedCredit" />
+      <Field id="postFrozenCredit" desc="交易后冻结额度"  edittype="textbox" datatype="number" scale="2" xpath="/postFrozenCredit" />
+      <Field id="postAvailableCredit" desc="交易后可用额度"  edittype="textbox" datatype="number" scale="2" xpath="/postAvailableCredit" />
+      <Field id="txnSerial" desc="交易顺序号" edittype="textbox" datatype="string" xpath="/txnSerial" />
+      <Field id="txnType" desc="交易类型" edittype="textbox" datatype="string" xpath="/txnType" />
+      <Field id="txnDate" desc="交易日期" edittype="datebox" datatype="date" xpath="/txnDate" />
+      <Field id="txnTime" desc="交易时间" edittype="datebox" datatype="date" xpath="/txnTime" />
+      <Field id="revsFlag" desc="冲正标识
+            0-正交易
+            1-冲正交易" edittype="textbox" datatype="string" xpath="/revsFlag" />
+      <Field id="origTxnLogId" desc="原交易流水号" edittype="textbox" datatype="string" xpath="/origTxnLogId" />
+      <Field id="origSrcLogId" desc="原来源流水号" edittype="textbox" datatype="string" xpath="/origSrcLogId" />
+      <Field id="txnStatus" desc="交易状态
+            00-成功
+            90-已冲正" edittype="textbox" datatype="string" xpath="/txnStatus" />
+      <Field id="memo" desc="备注" edittype="textbox" datatype="string" xpath="/memo" />
+      <Field id="createTime" desc="创建时间" edittype="datebox" datatype="date" xpath="/createTime" />
+      <Field id="updateTime" desc="更新时间" edittype="datebox" datatype="date" xpath="/updateTime" />
+      <Field id="updateProg" desc="更新程序" edittype="textbox" datatype="string" xpath="/updateProg" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>

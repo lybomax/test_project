@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data xmlns="http://www.rmitec.cn/dtst-mapper" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.rmitec.cn/dtst-mapper http://www.rmitec.cn/dtst-mapper">
+   <Define desc="订单信息表" type="call" pagesize="10" log="false" flowid="请填写实现action" expmaxrcd="100" flowctxid="" flowretid="" />
+   <Fields>
+      <Field id="orderId" desc="订单编号" edittype="textbox" datatype="string" xpath="/orderId" />
+      <Field id="orderNo" desc="订单编号" edittype="textbox" datatype="string" xpath="/orderNo" />
+      <Field id="resourceId" desc="文件资源编号" edittype="textbox" datatype="string" xpath="/resourceId" />
+      <Field id="loanContractId" desc="融资合同编号" edittype="textbox" datatype="string" xpath="/loanContractId" />
+      <Field id="custId" desc="客户号" edittype="textbox" datatype="string" xpath="/custId" />
+      <Field id="custName" desc="客户名称" edittype="textbox" datatype="string" xpath="/custName" />
+      <Field id="coreCustId" desc="核心企业编号" edittype="textbox" datatype="string" xpath="/coreCustId" />
+      <Field id="coreName" desc="核心企业名称" edittype="textbox" datatype="string" xpath="/coreName" />
+      <Field id="orderType" desc="订单类型
+            1-电子订单
+            2-合同订单
+            3-虚拟订单" edittype="textbox" datatype="string" xpath="/orderType" />
+      <Field id="orderDate" desc="订单日期" edittype="datebox" datatype="date" xpath="/orderDate" />
+      <Field id="expectDeliveryDate" desc="预计交货日期" edittype="datebox" datatype="date" xpath="/expectDeliveryDate" />
+      <Field id="currency" desc="订单币种" edittype="textbox" datatype="string" xpath="/currency" />
+      <Field id="amt" desc="订单金额"  edittype="textbox" datatype="number" scale="2" xpath="/amt" />
+      <Field id="netAmt" desc="订单净额"  edittype="textbox" datatype="number" scale="2" xpath="/netAmt" />
+      <Field id="memo" desc="备注" edittype="textbox" datatype="string" xpath="/memo" />
+      <Field id="source" desc="订单信息来源" edittype="textbox" datatype="string" xpath="/source" />
+      <Field id="orderStatus" desc="订单状态
+            01-已录入
+            02-已融资
+            03-已录入交货后凭证" edittype="textbox" datatype="string" xpath="/orderStatus" />
+      <Field id="createTime" desc="建立时间" edittype="datebox" datatype="date" xpath="/createTime" />
+      <Field id="updateTime" desc="最后更新时间" edittype="datebox" datatype="date" xpath="/updateTime" />
+      <Field id="updateProg" desc="最后更新程序" edittype="textbox" datatype="string" xpath="/updateProg" />
+   </Fields>
+   <Commands>
+      <Command id="btnAdd" desc="添加" type="addrecord" url="#" txn="" icon="fa fa-plus"/>
+      <Command id="btnSave" desc="保存" type="asyncsubmit" url="#" txn="" icon="fa fa-save"/>
+      <Command id="btnAddok" desc="确定" type="asyncsubmit" flowid="ACTION" url="#" txn="" icon="fa fa-check"/>
+      <Command id="btnCancel" desc="取消" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+      <Command id="btnReturn" desc="返回" type="none" flowid="ACTION" url="#" txn="" icon="fa fa-undo"/>
+   </Commands>
+</Data>
