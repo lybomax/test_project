@@ -2,7 +2,6 @@ package com.keng;
 
 import java.util.HashSet;
 import java.util.Set;
-import org.junit.Test;
 
 /**
  * @class: Test01_set中的short
@@ -22,7 +21,7 @@ public class Test01_set中的short {
       set.remove(i - 1);
     }
     System.out.println(set.size());  //1
-    System.out.println("set = " + set);
+    System.out.println("set = " + set); //set = [99]
 
     Set<Short> set2 = new HashSet<>();
     for (short i = 0; i < 100; i++) {

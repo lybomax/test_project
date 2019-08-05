@@ -15,6 +15,7 @@
     <module>pit</module>
     <module>a_sql</module>
     <module>a_dtst</module>
+    <module>test_reView</module>
   </modules>
   <packaging>pom</packaging>
 
