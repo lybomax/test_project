@@ -4,7 +4,7 @@ package com.ruimin.test_java8新特性;
  * @class: Test06_快捷键测试
  * @title: //Alt+Enter   功能测试
  * @desc: //模块目的、功能描述
- * @author: LiYingYing
+ * @author: Lyy
  * @date: 2019年07月19日 22:00
  * @since: 1.0.0
  */

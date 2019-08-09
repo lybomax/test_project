@@ -6,7 +6,7 @@ import java.util.stream.Stream;
  * @class: test03_reduce
  * @title: //主题说明
  * @desc: // 方法根据指定的函数将元素序列累积到某个值。此方法有两个参数：
- * @author: LiYingYing
+ * @author: Lyy
  * @date: 2019年07月02日 09:46
  * @since: 1.0.0
  */

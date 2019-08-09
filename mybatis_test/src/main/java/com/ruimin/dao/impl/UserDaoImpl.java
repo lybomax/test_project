@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSession;
  * @class: UserDaoImpl
  * @title: //主题说明
  * @desc: //模块目的、功能描述
- * @author: LiYingYing
+ * @author: Lyy
  * @date: 2019年07月01日 15:45
  * @since: 1.0.0
  */

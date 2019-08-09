@@ -10,7 +10,7 @@ import org.junit.Test;
  * @class: Test02_Array
  * @title: //  数组转为基本类型
  * @desc: //模块目的、功能描述
- * @author: LiYingYing
+ * @author: Lyy
  * @date: 2019年07月07日 19:07
  * @since: 1.0.0
  */

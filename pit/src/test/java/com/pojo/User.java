@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
  * @class: USer
  * @title: //主题说明
  * @desc: //模块目的、功能描述
- * @author: LiYingYing
+ * @author: Lyy
  * @date: 2019年07月25日 09:17
  * @since: 1.0.0
  */
@@ -17,6 +17,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class User {
 
-  private Integer id;
-  private String name;
+    private Integer id;
+    private String name;
 }
