@@ -21,6 +21,17 @@ public class Test03_String {
     System.out.println("s2 = " + s2);
     int i = 1;
     System.out.println(Double.isNaN(1));
+    System.out.println("======================");
+//    返回 startlndex 和 endludex-l 之间的代码点数量。没有配成对的代用字符将计入代码点
+    //包小不包大
+    String s = "ABCDE";
+    int i1 = s.codePointCount(1, 5);
+    System.out.println("i1 = " + i1);
+
+    String replace = s.replace("ABC", "A");
+    System.out.println("replace = " + replace);
+    String substring = s.substring(0, 2);
+    System.out.println("substring = " + substring);
   }
 
 }
