@@ -2,7 +2,6 @@ package com.keng;
 
 import com.pojo.Person;
 import com.pojo.User;
-import java.lang.reflect.InvocationTargetException;
 import org.apache.commons.beanutils.BeanUtils;
 import org.junit.Test;
 
@@ -16,7 +15,7 @@ import org.junit.Test;
  */
 public class Test14_BeanUtils {
     @Test
-    public void test01() throws InvocationTargetException, IllegalAccessException {
+    public void test01() throws Exception {
         User user = new User(1,"占山");
         Person person = new Person();
         BeanUtils.copyProperties(person,user);
