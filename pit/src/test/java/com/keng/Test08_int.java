@@ -1,5 +1,8 @@
 package com.keng;
 
+import java.util.Random;
+import org.junit.Test;
+
 /**
  * @class: Test08_int
  * @title: //主题说明
@@ -21,5 +24,11 @@ public class Test08_int {
         System.out.println();
         System.out.println();
         System.out.println();
+    }
+
+    @Test
+    public void test03(){
+        Random random = new Random();
+        System.out.println(random.nextInt(6));
     }
 }

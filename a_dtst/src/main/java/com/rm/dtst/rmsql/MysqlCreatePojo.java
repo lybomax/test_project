@@ -59,7 +59,7 @@ public class MysqlCreatePojo {
 		conn = DriverManager.getConnection(url, prop);
 
 		// 等于2,
-		 tableStart = new String[] {"ep"};
+		 tableStart = new String[] {"ep_serv_dtl_pay_log"};
 	}
 
 	// 获取库中所有用户表
