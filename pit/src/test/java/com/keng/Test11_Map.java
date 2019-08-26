@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import org.apache.commons.collections.MapUtils;
+import org.junit.Test;
 
 /**
  * @class: Test11_Map
@@ -29,5 +31,23 @@ public class Test11_Map {
             System.out.println("value = " + value);
             System.out.println("=============================");
         }
+    }
+
+    @Test
+    public void test02(){
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("key2", "2222");
+        map.put("key1", "123");
+        //从map中获取值，不存在返回默认值
+        Object object = MapUtils.getObject(map, "key1", "defaultValue");
+        System.out.println("object = " + object);
+        //输出map中值
+        MapUtils.debugPrint(System.out, "测试", map);
+        //按照key对map进行排序
+        Map orderedMap = MapUtils.orderedMap(map);
+        System.out.println("orderedMap = " + orderedMap);
+        //对map key=value进行反转，value=key
+        Map invertMap = MapUtils.invertMap(orderedMap);
+        System.out.println("invertMap = " + invertMap);
     }
 }
