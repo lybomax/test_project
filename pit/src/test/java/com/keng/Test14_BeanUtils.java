@@ -1,8 +1,10 @@
 package com.keng;
 
+import com.pojo.Man;
 import com.pojo.Person;
 import com.pojo.User;
 import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 
 /**
@@ -20,5 +22,8 @@ public class Test14_BeanUtils {
         Person person = new Person();
         BeanUtils.copyProperties(person,user);
         System.out.println("person = " + person);
+        Man man = new Man();
+
+
     }
 }

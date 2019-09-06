@@ -26,20 +26,25 @@ public class Test03_String {
         //    返回 startlndex 和 endludex-l 之间的代码点数量。没有配成对的代用字符将计入代码点
         //包小不包大
         String s = "ABCDE";
-        int i1 = s.codePointCount(1, 5);
+        int i1 = s.codePointCount(0, 5);
         System.out.println("i1 = " + i1);
+        //替换
+//        String replace = s.replace("ABC", "A");
+//        System.out.println("replace = " + replace);
 
-        String replace = s.replace("ABC", "A");
-        System.out.println("replace = " + replace);
-        String substring = s.substring(0, 2);
+        //截取  从第1个 截取到 地2个  包小不包大
+        String substring = s.substring(0,3);
+        //截取  截取第3 后面的  包括3
+        String substring2 = s.substring(3);
         System.out.println("substring = " + substring);
+        System.out.println("substring2 = " + substring2);
     }
 
     @Test
     public void test02() {
         String s1 = "aabaaacacaca";
         String s2 = "b";
-        String a = StringUtils.replaceChars(s1,"aa", "B");
+        String a = StringUtils.replaceChars(s1, "aa", "B");
         System.out.println("a = " + a);
     }
 
