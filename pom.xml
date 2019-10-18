@@ -16,6 +16,7 @@
     <module>a_sql</module>
     <module>a_dtst</module>
     <module>test_reView</module>
+	<module>methods</module>
   </modules>
   <packaging>pom</packaging>
 

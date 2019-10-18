@@ -1,17 +1,18 @@
-package com.rm.sql;
+package com.rm.pojo;
 
 import lombok.Data;
 
 /**
- * @class: Demo01
+ * @class: pojo01
  * @title: //主题说明
  * @desc: //模块目的、功能描述
  * @author: Lyy
- * @date: 2019年07月19日 09:54
+ * @date: 2019年10月11日 15:51
  * @since: 1.0.0
  */
 @Data
-public class Demo01 {
+public class Pojo01 {
 	private String id;
 	private String name;
+	private String date;
 }
