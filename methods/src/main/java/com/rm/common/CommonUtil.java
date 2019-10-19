@@ -6,7 +6,10 @@ import java.beans.PropertyDescriptor;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
 import java.util.*;
+import lombok.extern.log4j.Log4j;
 import org.apache.commons.beanutils.BeanUtils;
+import org.apache.commons.beanutils.ConvertUtils;
+import org.apache.commons.beanutils.converters.DateConverter;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateFormatUtils;
@@ -18,7 +21,8 @@ import org.apache.commons.lang3.time.DateFormatUtils;
  * @date: 2019年10月11日 17:01
  * @since: 1.0.0
  */
-public class Util {
+@Log4j
+public class CommonUtil {
 	
 	/**
 	 *
@@ -173,5 +177,22 @@ public class Util {
 			throw new Exception("比较失败", e);
 		}
 		return result;
+	}
+	
+	/**
+	 * 通用对象复制方法,转换错误时抛出异常
+	 *
+	 * @param dest
+	 * @param orig
+	 * @throws Exception
+	 */
+	public static void copyProperties(Object dest, Object orig) throws Exception {
+		try {
+			ConvertUtils.register(new DateConverter(null), java.util.Date.class);
+			BeanUtils.copyProperties(dest, orig);
+		} catch (Exception e) {
+			log.error("bean属性copy异常", e);
+			throw new Exception(e);
+		}
 	}
 }

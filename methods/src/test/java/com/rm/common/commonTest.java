@@ -15,15 +15,15 @@ public class commonTest {
 		pojo01.setId("123");
 		pojo01.setDate("new Date()");
 		pojo01.setName("AAA");
-		Map map = Util.beanToMap(pojo01, testMap);
+		Map map = CommonUtil.beanToMap(pojo01, testMap);
 		System.out.println("map = " + map);
-		Pojo01 pojo = (Pojo01) Util.mapToBean(map, new Pojo01());
+		Pojo01 pojo = (Pojo01) CommonUtil.mapToBean(map, new Pojo01());
 		System.out.println("pojo = " + pojo);
 	}
 	
 	@Test
 	public void testUUID(){
-		String uuid = Util.getUUID();
+		String uuid = CommonUtil.getUUID();
 		System.out.println("uuid = " + uuid);
 	}
 	
