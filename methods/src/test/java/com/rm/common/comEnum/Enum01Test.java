@@ -1,7 +1,6 @@
 package com.rm.common.comEnum;
 
-import static org.junit.Assert.*;
-
+import com.rm.common.Enum01;
 import java.util.Map;
 import org.junit.Test;
 

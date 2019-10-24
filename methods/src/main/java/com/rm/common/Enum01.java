@@ -1,4 +1,4 @@
-package com.rm.common.comEnum;
+package com.rm.common;
 
 import java.util.HashMap;
 import java.util.Map;
