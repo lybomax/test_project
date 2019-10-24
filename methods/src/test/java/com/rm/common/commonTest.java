@@ -23,8 +23,10 @@ public class commonTest {
 	
 	@Test
 	public void testUUID(){
-		String uuid = CommonUtil.getUUID();
-		System.out.println("uuid = " + uuid);
+		Pojo01 pojo01 = new Pojo01();
+		String s = "(String) pojo01";
+		Object o = (Object) s;
+		System.out.println(o);
 	}
 	
 }
