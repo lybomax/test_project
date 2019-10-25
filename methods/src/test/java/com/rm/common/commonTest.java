@@ -34,11 +34,10 @@ public class commonTest {
 	public void testString(){
 		Pojo01 pojo01 = new Pojo01();
 		String s = "(String) pojo01";
-		Object o = (Object) s;
-		System.out.println(o);
+		System.out.println((Object) s);
 		
-		Double d = 1.111D;
-		int i = d.shortValue();
+		double d = 1.111D;
+		int i = (short) d;
 		System.out.println("i = " + i);
 	}
 	
