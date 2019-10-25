@@ -4,6 +4,7 @@ package com.rm.common;
 import com.rm.pojo.Pojo01;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 import org.junit.Test;
 
 public class commonTest {
@@ -23,10 +24,22 @@ public class commonTest {
 	
 	@Test
 	public void testUUID(){
+		String s1 = UUID.randomUUID().toString();
+		System.out.println("s1 = " + s1);
+		
+		String uuid = CommonUtil.getUUID().replaceAll("-", "");
+		System.out.println("uuid = " + uuid);
+	}
+	@Test
+	public void testString(){
 		Pojo01 pojo01 = new Pojo01();
 		String s = "(String) pojo01";
 		Object o = (Object) s;
 		System.out.println(o);
+		
+		Double d = 1.111D;
+		int i = d.shortValue();
+		System.out.println("i = " + i);
 	}
 	
 }
