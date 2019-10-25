@@ -24,10 +24,10 @@ public class commonTest {
 	
 	@Test
 	public void testUUID(){
-		String s1 = UUID.randomUUID().toString();
+		String s1 = UUID.randomUUID().toString().replaceAll("-", "");
 		System.out.println("s1 = " + s1);
 		
-		String uuid = CommonUtil.getUUID().replaceAll("-", "");
+		String uuid = CommonUtil.getUUID();
 		System.out.println("uuid = " + uuid);
 	}
 	@Test
