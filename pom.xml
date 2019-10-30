@@ -17,6 +17,7 @@
     <module>a_dtst</module>
     <module>test_reView</module>
 	<module>methods</module>
+	<module>base_test</module>
   </modules>
   <packaging>pom</packaging>
 
