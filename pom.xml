@@ -18,6 +18,7 @@
     <module>test_reView</module>
 	<module>methods</module>
 	<module>base_test</module>
+	<module>thread</module>
   </modules>
   <packaging>pom</packaging>
 

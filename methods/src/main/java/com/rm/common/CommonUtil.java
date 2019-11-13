@@ -195,4 +195,20 @@ public class CommonUtil {
 			throw new Exception(e);
 		}
 	}
+	
+	/**
+	 * 通用对象复制方法,转换错误时抛出异常
+	 *
+	 * @param dest
+	 * @param orig
+	 * @throws Exception
+	 */
+	static void copyProperties2(Object dest, Object orig) throws Exception {
+		try {
+			org.springframework.beans.BeanUtils.copyProperties(dest,orig);
+		} catch (Exception e) {
+			log.error("bean属性copy异常", e);
+			throw new Exception(e);
+		}
+	}
 }
