@@ -18,7 +18,6 @@ public class TraditionThread {
 			}
 		};
 		thread.start();
-		thread.start();
 		
 		Thread thread2 = new Thread(new Runnable() {
 			@Override

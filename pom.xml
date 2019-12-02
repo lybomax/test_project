@@ -19,6 +19,8 @@
 	<module>methods</module>
 	<module>base_test</module>
 	<module>thread</module>
+	<module>export</module>
+	<module>spring_boot</module>
   </modules>
   <packaging>pom</packaging>
 
