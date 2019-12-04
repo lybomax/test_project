@@ -21,6 +21,7 @@
 	<module>thread</module>
 	<module>export</module>
 	<module>spring_boot</module>
+	<module>enum</module>
   </modules>
   <packaging>pom</packaging>
 
