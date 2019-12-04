@@ -13,7 +13,7 @@ import org.junit.Test;
  */
 public class test01 {
 	@Test
-	public void test01(){
+	public void enumTest01(){
 		System.out.println(EnumProvisionStat.PROVISION.getCode());
 		System.out.println("--------------------------------------");
 		System.out.println(EnumProvisionStat.getByKey("01"));
