@@ -50,4 +50,13 @@ public class Test11_Map {
         Map invertMap = MapUtils.invertMap(orderedMap);
         System.out.println("invertMap = " + invertMap);
     }
+    
+    @Test
+    public void test03(){
+        HashMap<String , String> map = new HashMap<>();
+        map.put("id","01");
+        map.put("name","map01");
+        String id = MapUtils.getString(map, "id");
+        System.out.println("id = " + id);
+    }
 }

@@ -180,7 +180,7 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * 通用对象复制方法,转换错误时抛出异常
+	 * 阿帕奇  通用对象复制方法,  后面给前面赋值
 	 *
 	 * @param dest
 	 * @param orig
@@ -197,7 +197,7 @@ public class CommonUtil {
 	}
 	
 	/**
-	 * 通用对象复制方法,转换错误时抛出异常
+	 * spring通用对象复制方法,    前面给后面赋值
 	 *
 	 * @param dest
 	 * @param orig

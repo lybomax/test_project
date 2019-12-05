@@ -4,7 +4,6 @@ import com.pojo.Man;
 import com.pojo.Person;
 import com.pojo.User;
 import org.apache.commons.beanutils.BeanUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 
 /**

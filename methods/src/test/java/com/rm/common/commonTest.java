@@ -52,9 +52,20 @@ public class commonTest {
 		
 		Pojo02 pojo02 = new Pojo02();
 		
-		CommonUtil.copyProperties2(pojo02, pojo01);
+		CommonUtil.copyProperties2(pojo01,pojo02);
 		System.out.println("pojo02 = " + pojo02);
+		System.out.println("pojo01 = " + pojo01);
+		System.out.println("---------------------------------");
+		Pojo01 pojo03 = new Pojo01();
+		pojo03.setId("01");
+		pojo03.setName("02");
+		pojo03.setDate("03");
 		
+		Pojo02 pojo04 = new Pojo02();
+		
+		CommonUtil.copyProperties(pojo04,pojo03);
+		System.out.println("pojo04 = " + pojo04);
+		System.out.println("pojo03 = " + pojo03);
 	}
 	
 	@Test
