@@ -95,7 +95,7 @@ public class commonTest {
 	 */
 	@Test
 	public void rmbTest(){
-		String rmb = "1234.12";
+		String rmb = "1234";
 		String fourRMB = CommonUtil.getFourRMB(rmb);
 		System.out.println("fourRMB = " + fourRMB);
 	}
