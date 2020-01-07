@@ -28,9 +28,9 @@ import org.apache.commons.lang.StringUtils;
 public class MysqlCreatePojo {
 
 	private Connection conn = null;
-	private String url = "jdbc:mysql://116.228.233.90:3307/easypassdev?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false";
-	private String userName = "easypass";
-	private String userPwd = "pass1234";
+	private String url = "jdbc:mysql://39.97.101.165:3306/test?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&useSSL=false";
+	private String userName = "root";
+	private String userPwd = "123456";
 	private String[] charTypes = { "varchar", "char" };
 	private String[] intTypes = { "int", "integer" };
 	private String[] bigDecimalTypes = { "decimal", "numeric" };
@@ -39,7 +39,7 @@ public class MysqlCreatePojo {
 	private PreparedStatement ps = null;
 	private ResultSet rs = null;
 	private int genType =0;// 0生成po、dataset,1只生成po，2生成dataset
-	private int isAllTable = 2;// 所有表0，全部，2 指定开头表
+	private int isAllTable = 0;// 所有表0，全部，2 指定开头表
 	private String[] tableStart = null;
 	private ArrayList<String> tables = new ArrayList<String>();// 生成的表名
 	private String pojopack = "com.ruimin.ifs.batch.bean.po";
@@ -59,7 +59,7 @@ public class MysqlCreatePojo {
 		conn = DriverManager.getConnection(url, prop);
 
 		// 等于2,
-		 tableStart = new String[] {"ep_serv_dtl_pay_log"};
+		 tableStart = new String[] {"a"};
 	}
 
 	// 获取库中所有用户表

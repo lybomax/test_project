@@ -5,13 +5,18 @@ import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import lombok.extern.log4j.Log4j;
 import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.beanutils.ConvertUtils;
 import org.apache.commons.beanutils.converters.DateConverter;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.commons.lang3.time.DateFormatUtils;
 /**
  * @class: Util
@@ -210,5 +215,174 @@ public class CommonUtil {
 			log.error("bean属性copy异常", e);
 			throw new Exception(e);
 		}
+	}
+	
+	/**
+	 * 数值格式化
+	 *
+	 * @param inVal
+	 *            数值
+	 * @param scale
+	 *            保留小数位
+	 * @param isFillZero
+	 *            是否需要以0进行填充
+	 * @param isPoint
+	 *            是否需要千分位
+	 * @return
+	 */
+	public static String formatBigdecimal(BigDecimal inVal, int scale, boolean isFillZero, boolean isPoint) {
+		BigDecimal tmpBigdecimal = inVal.setScale(scale, BigDecimal.ROUND_HALF_UP);
+		NumberFormat formater = null;
+		if (scale == 0) {
+			String fomart = "######";
+			if (isPoint) {
+				fomart = "###,###";
+			}
+			formater = new DecimalFormat(fomart);
+		} else {
+			StringBuffer buff = new StringBuffer();
+			if (inVal.intValue() == 0) {
+				buff.append("0.");
+			} else {
+				String fomart = "######.";
+				if (isPoint) {
+					fomart = "###,###.";
+				}
+				buff.append(fomart);
+			}
+			for (int i = 0; i < scale; i++) {
+				if (isFillZero) {
+					buff.append("0");
+				} else {
+					buff.append("#");
+				}
+			}
+			formater = new DecimalFormat(buff.toString());
+		}
+		return formater.format(tmpBigdecimal);
+	}
+	
+	/* 数字 正序 */
+	private static final String[] RMB_ARR = { "零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖" };
+	/* 整数四位数单位 倒序 */
+	private static final String[] RMB_INT_MIN_UNIT_ARR = { "", "拾", "佰", "仟" };
+	/* 小数单位 正序 */
+	private static final String[] RMB_DEC_MAX_UNIT_ARR = { "角", "分" };
+	/* 整数每四位的单位 倒序 */
+	private static final String[] RMB_MAX_UNIT_ARR = { "圆", "万", "亿", "万", "亿" };
+	/* 开头 */
+	private static final String START_RMB = "";
+	/* 只有整数的结尾 */
+	private static final String END_RMB = "整";
+	
+	/**
+	 * @描述 : 获取四位人民币的中文大写格式
+	 */
+	static String getFourRMB(String fourNum) {
+		StringBuilder fourRMB = new StringBuilder();
+		boolean zeroFlag = false;
+		if ("0".equals(fourNum)) {
+			return RMB_ARR[0];
+		}
+		for (int i = fourNum.length() - 1; i >= 0; i--) {
+			Integer integer = Integer.valueOf(String.valueOf(fourNum.charAt(i)));
+			if (integer > 0) {
+				fourRMB.insert(0, RMB_ARR[integer] + RMB_INT_MIN_UNIT_ARR[fourNum.length() - i - 1]);
+				zeroFlag = true;
+			} else if (zeroFlag) {
+				fourRMB.insert(0, RMB_ARR[0]);
+				zeroFlag = false;
+			}
+		}
+		return fourRMB.toString();
+	}
+	
+	/**
+	 * 人民币转金额
+	 *
+	 * @param
+	 * @return
+	 * @throws Exception
+	 */
+	public static String toCNY(String inAmt) throws Exception {
+		String fmtAmt = format(inAmt);
+		String[] integralDecimal = fmtAmt.split("\\.");
+		String integral = StringUtils.trim(integralDecimal[0]);
+		String decimal = null;
+		if (integralDecimal.length>1) {
+			decimal = StringUtils.trim(integralDecimal[1]);
+		}
+		/* 圆 万 亿 万 */
+		String[] integrals = new String[(integral.length() + 3) / 4];
+		int start, end;
+		for (int i = 0, j = 0; i < integrals.length; i++) {
+			start = (integral.length() - 4 * i - 4) < 0 ? 0 : (integral.length() - 4 * i - 4);
+			end = integral.length() - 4 * i;
+			integrals[j++] = integral.substring(start, end);
+		}
+		/* 整数部分 */
+		String integralRMB = "";
+		for (int i = 0; i < integrals.length; i++) {
+			integralRMB = getFourRMB(integrals[i]) + RMB_MAX_UNIT_ARR[i] + integralRMB;
+		}
+		/* 小数部分 - 没有小数 */
+		if (StringUtils.isBlank(decimal) || NumberUtils.toInt(decimal)==0) {
+			return START_RMB + integralRMB + END_RMB;
+		}
+		/* 小数部分 - 有小数 - 四舍五入 */
+		BigDecimal bigDecimal = new BigDecimal("0." + decimal);
+		decimal = String.valueOf(bigDecimal.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue()).split("\\.")[1];
+		/* 小数部分 - 有小数 - 获取小数的大写中文格式 */
+		String decimalRMB = getDecimalRMB(decimal);
+		if (StringUtils.isNotBlank(decimalRMB) && StringUtils.equals(RMB_ARR[0] + RMB_MAX_UNIT_ARR[0],integralRMB)) {
+			integralRMB = "";
+		}
+		return START_RMB + integralRMB + decimalRMB;
+	}
+	
+	/**
+	 * @描述 : 格式化字符串
+	 */
+	// 此处预编译，可以提高效率
+	private static Pattern pattern = Pattern.compile("([0-9]+(\\.[0-9]+){0,1})");
+	private static Pattern pattern2 = Pattern.compile("^[0]+");
+	
+	private static String format(String number) throws Exception {
+		number = "0" + number;
+		Matcher matcher = pattern.matcher(number);
+		if (!matcher.matches()) {
+			throw new RuntimeException("您输入的数字格式不正确");
+		}
+		matcher = pattern2.matcher(number);
+		if (matcher.find()) {
+			number = number.replaceAll("^[0]+", "");
+			number = number.replaceAll("[0]+$", "");
+		}
+		if ("".equals(number)) {
+			number = "0";
+		}
+		if (number.startsWith(".")) {
+			number = "0" + number;
+		}
+		if (number.endsWith(".")) {
+			number = number + "0";
+		}
+		return number;
+	}
+	
+	/**
+	 * @描述 : 获取小数的大写中文格式
+	 */
+	private static String getDecimalRMB(String decimal) {
+		StringBuilder decimalRMB = new StringBuilder();
+		for (int i = 0; i < decimal.length(); i++) {
+			Integer integer = Integer.valueOf(String.valueOf(decimal.charAt(i)));
+			if (integer > 0) {
+				decimalRMB.append(RMB_ARR[integer] + RMB_DEC_MAX_UNIT_ARR[i]);
+			}else {
+				decimalRMB.append(RMB_ARR[integer]);
+			}
+		}
+		return decimalRMB.toString();
 	}
 }

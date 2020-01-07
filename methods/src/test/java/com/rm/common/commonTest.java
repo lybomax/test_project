@@ -3,6 +3,7 @@ package com.rm.common;
 
 import com.rm.pojo.Pojo01;
 import com.rm.pojo.Pojo02;
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
@@ -79,4 +80,28 @@ public class commonTest {
 		}
 	}
 	
+	/**
+	 * 格式化  bigDecimal
+	 */
+	@Test
+	public void bigdecimalTest(){
+		BigDecimal bigDecimal = new BigDecimal(3123123456.1555555555555);
+		String s = CommonUtil.formatBigdecimal(bigDecimal, 3, true, true);
+		System.out.println("s = " + s);
+	}
+	
+	/**
+	 * 人民币大写
+	 */
+	@Test
+	public void rmbTest(){
+		String rmb = "1234.12";
+		String fourRMB = CommonUtil.getFourRMB(rmb);
+		System.out.println("fourRMB = " + fourRMB);
+	}
+	
+	@Test
+	public void rmbTest2(){
+		this.rmbTest();
+	}
 }
