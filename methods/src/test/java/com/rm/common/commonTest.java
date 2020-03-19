@@ -90,18 +90,17 @@ public class commonTest {
 		System.out.println("s = " + s);
 	}
 	
-	/**
-	 * 人民币大写
-	 */
 	@Test
-	public void rmbTest(){
-		String rmb = "1234";
-		String fourRMB = CommonUtil.getFourRMB(rmb);
-		System.out.println("fourRMB = " + fourRMB);
+	public void test20031701() throws Exception {
+		Pojo01 pojo01 = new Pojo01();
+		pojo01.setId("123");
+		pojo01.setName("123");
+		
 	}
 	
 	@Test
-	public void rmbTest2(){
-		this.rmbTest();
+	public void testUuid() throws Exception {
+		System.out.println(CommonUtil.getUUID());
 	}
+
 }
