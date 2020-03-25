@@ -9,6 +9,8 @@ import java.lang.reflect.Type;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -388,7 +390,7 @@ public class CommonUtil {
 		return decimalRMB.toString();
 	}
 	
-	private Object null2String(Object obj) {
+	public static Object null2String(Object obj) {
 		if (obj != null) {
 			Class<? extends Object> classz = obj.getClass();
 			// 获取所有该对象的属性值
@@ -424,5 +426,19 @@ public class CommonUtil {
 			}
 		}
 		return obj;
+	}
+	
+	public static String dateAdd(String date,Long day) throws ParseException {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd"); // 日期格式
+		Date dates = dateFormat.parse(date); // 指定日期
+		Date newDate = timeAdd(dates, day); // 指定日期加上20天
+		return dateFormat.format(newDate);
+	}
+	
+	public static Date timeAdd(Date date,long day){
+		long time = date.getTime(); // 得到指定日期的毫秒数
+		day = day*24*60*60*1000; // 要加上的天数转换成毫秒数
+		time+=day; // 相加得到新的毫秒数
+		return new Date(time); // 将毫秒数转换成日期
 	}
 }
